@@ -75,9 +75,14 @@ sudo lpadmin -p DCPJ125 -E -v "$DEVICE_URI" -P /usr/share/ppd/Brother/brother_dc
 
 echo "✅ Printer DCPJ125 has been added."
 
-# Execute CUPS wrapper as recommended by Brother
-echo "🔧 Executing CUPS wrapper..."
+# Fix CUPS wrapper for systemd systems
+echo "🔧 Fixing CUPS wrapper for systemd compatibility..."
 if [ -f "/opt/brother/Printers/dcpj125/cupswrapper/cupswrapperdcpj125" ]; then
+    sudo sed -i 's|/etc/init.d/cups|/etc/rc.d/cupsd|' "/opt/brother/Printers/dcpj125/cupswrapper/cupswrapperdcpj125"
+    echo "✅ CUPS wrapper fixed for systemd"
+    
+    # Execute CUPS wrapper as recommended by Brother
+    echo "🔧 Executing CUPS wrapper..."
     sudo /opt/brother/Printers/dcpj125/cupswrapper/cupswrapperdcpj125
     echo "✅ CUPS wrapper executed successfully"
 else

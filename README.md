@@ -48,9 +48,10 @@ This script automates the installation and configuration of the Brother DCP-J125
 4. **Downloads Drivers**: Fetches the official Brother LPR and CUPS wrapper drivers
 5. **Installs Drivers**: Installs both driver packages with automatic dependency resolution
 6. **Configures Printer**: Automatically detects and configures the Brother DCP-J125
-7. **Executes CUPS Wrapper**: Runs the required Brother CUPS wrapper executable
-8. **User Group Setup**: Adds the current user to the 'lp' group for printer access
-9. **Test Print**: Offers to print a test page to verify installation
+7. **Systemd Compatibility**: Fixes the CUPS wrapper script for modern systemd-based distributions
+8. **Executes CUPS Wrapper**: Runs the required Brother CUPS wrapper executable
+9. **User Group Setup**: Adds the current user to the 'lp' group for printer access
+10. **Test Print**: Offers to print a test page to verify installation
 
 ## Important Post-Installation Steps
 
