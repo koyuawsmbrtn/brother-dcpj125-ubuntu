@@ -61,7 +61,7 @@ echo "📦 Installing Brother LPR driver..."
 sudo dpkg -i dcpj125lpr-1.1.3-1.i386.deb || sudo apt --fix-broken install -y
 
 echo "📦 Installing Brother CUPS wrapper..."
-sudo dpkg -i dcpj125cupswrapper-1.1.3-2.i386.deb || sudo apt --fix-broken install -y
+sudo dpkg -i dcpj125cupswrapper-1.1.3-1.i386.deb || sudo apt --fix-broken install -y
 
 # 5. Configure printer
 echo "🖨 Configuring printer..."
