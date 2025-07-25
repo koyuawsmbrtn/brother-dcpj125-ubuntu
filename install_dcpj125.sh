@@ -53,8 +53,8 @@ cd "$WORKDIR"
 
 # 3. Download drivers
 echo "⬇️ Downloading Brother drivers..."
-wget -q https://download.brother.com/welcome/dlf006893/dcpj125lpr-1.1.3-1.i386.deb
-wget -q https://download.brother.com/welcome/dlf006894/dcpj125cupswrapper-1.1.3-2.i386.deb
+wget -q https://download.brother.com/welcome/dlf005583/dcpj125lpr-1.1.3-1.i386.deb
+wget -q https://download.brother.com/welcome/dlf005585/dcpj125cupswrapper-1.1.3-1.i386.deb
 
 # 4. Install drivers
 echo "📦 Installing Brother LPR driver..."
